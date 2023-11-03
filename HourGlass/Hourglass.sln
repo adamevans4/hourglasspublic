@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hourglass", "Hourglass.csproj", "{71827B55-507C-4728-8FDC-33FA1D5B2C2E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F00F06A9-16BF-4B28-9BD9-5664EB1453CC} = {F00F06A9-16BF-4B28-9BD9-5664EB1453CC}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "..\Infrastructure\Infrastructure.csproj", "{E48D9BD6-6CFB-4C37-B492-660DA98785F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "..\Infrastructure\Infrastructure.csproj", "{E48D9BD6-6CFB-4C37-B492-660DA98785F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationCore", "..\ApplicationCore\ApplicationCore.csproj", "{F00F06A9-16BF-4B28-9BD9-5664EB1453CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationCore", "..\ApplicationCore\ApplicationCore.csproj", "{F00F06A9-16BF-4B28-9BD9-5664EB1453CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

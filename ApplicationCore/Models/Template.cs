@@ -15,6 +15,7 @@ namespace ApplicationCore.Models
 		[Required]
 		public string Name { get; set; } = string.Empty;
 		public string? TemplateImage { get; set; }
+		public string TemplateColor { get; set; } = "#FFFFFF";
 		public int TemplateGroupId { get; set; }
 		[ForeignKey("TemplateGroupId")]
 		public virtual TemplateGroup? TemplateGroup { get; set; }
