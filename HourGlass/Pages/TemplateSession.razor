@@ -1,0 +1,30 @@
+﻿@page "/TemplateSession"
+@page "/TemplateSession/{templateID:int}"
+
+<PageTitle>Start a Session!</PageTitle>
+
+@if (templateID.HasValue)
+{
+    <p>Template ID: @templateID</p>
+    <!-- Your TemplateSession content here -->
+}
+else
+{
+    <p>No templateID provided.</p>
+}
+
+@code {
+    [Parameter] public int? templateID { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (templateID != null)
+        {
+            // Use the templateID as needed
+        }
+        else
+        {
+            // Handle the case where templateID is not provided
+        }
+    }
+}

@@ -1,6 +1,5 @@
 using ApplicationCore.Interfaces;
 using ApplicationCore.Models;
-using Hourglass.Data;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -19,7 +18,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+
 
 //change to application use not identity
 //builder.Services.AddIdentity<ApplicationUser, IdentityRole>();
