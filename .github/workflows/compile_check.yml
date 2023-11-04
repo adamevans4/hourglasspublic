@@ -21,7 +21,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore HourGlass/Hourglass.csproj
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore HourGlass/Hourglass.csproj
     - name: Check for build errors
       run: |
         if [ $? -eq 0 ]; then
