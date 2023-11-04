@@ -19,8 +19,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore projectgroup1/HourGlass/Hourglass.csproj
-      working-directory: projectgroup1/HourGlass
+      run: dotnet restore HourGlass/Hourglass.csproj
     - name: Build
       run: dotnet build --no-restore
     - name: Check for build errors
