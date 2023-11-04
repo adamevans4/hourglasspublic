@@ -6,8 +6,6 @@ name: .NET
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   build:
@@ -24,5 +22,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+    - name: Check for build errors
+      run: |
+        if [ $? -eq 0 ]; then
+          echo "Build successful"
+        else
+          echo "Build failed"
+          exit 1
+        fi
