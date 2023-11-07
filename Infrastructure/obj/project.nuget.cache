@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xlhu0RTCA2eY+GbrTXQ3UYKdpfWZXYz/7TwRxcEm1tV22mEfhUnNgllFFyvbH96xL2LkC2242yNf3fTZNBjgMg==",
+  "dgSpecHash": "y2lCRLoby7MwG70hO/I6K071AlP7/NQ4OOK4SfaLbpm47vHksHN7ZOdF+MY0OtixS0cBYAr8IVoNNNc0U6DPKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\School\\source\\repos\\projectgroup1-1105\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\School\\Desktop\\MauiConvert\\projectgroup1-1105\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\School\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\School\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

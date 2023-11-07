@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mk4O9TefhViHKnKEZRViEh9G0jyGELOeEGj2RT5n3uCwNip47gtiQoElK9w0gcG6Ib4Dz+i8/Bk45pNpS8wwow==",
+  "dgSpecHash": "PWQPWOdYBzVEjeVg3Q5hgCItots/Df3Mu9a4YvZH71+Hy4b15qwIvziaRI0d7fEk0Iy3IoLkenNtfAiccO1RCg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\School\\source\\repos\\projectgroup1-1105\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\School\\Desktop\\MauiConvert\\projectgroup1-1105\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\School\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\School\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
