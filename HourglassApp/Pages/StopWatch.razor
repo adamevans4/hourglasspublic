@@ -1,0 +1,11 @@
+﻿@page "/stopwatch"
+
+<h1>Timer</h1>
+
+<p><button onclick="@(async() => { if (!isRunning) await StartTimer(); })">Start/Resume</button></p>
+<p><button onclick="@Pause">Pause</button></p>
+<p><button onclick="@Reset">Reset</button></p>
+
+<p>@stopwatchvalue</p>
+
+

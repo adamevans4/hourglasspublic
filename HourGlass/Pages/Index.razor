@@ -3,17 +3,21 @@
 @using ApplicationCore.Models
 @using ApplicationCore.Interfaces
 @using Microsoft.AspNetCore.Components 
+
 <PageTitle>Index</PageTitle>
 
 <h1>Your Templates:</h1>
+<div class="row text-center">
+    <a class="hourglass-button btn btn-primary m-3 disabled" role="button" href="CreateTemplate">Create New <i class="bi bi-plus-circle"></i></a>
+</div>
 
 <div class="row">
     @foreach (var template in TemplateList)
     {
-        <a class="col-md-4" @onclick="() => OpenTemplateSession(template.Id)">
+        <a class="hourglass-template-card col-md-4" @onclick="() => OpenTemplateSession(template.Id)">
             <div class="card mb-3">
-                <div class="card-body p-3 m-3" style="background-color: @template.TemplateColor">
-                    <h5 class="card-title">@template.Name</h5>
+                <div class="text-center card-body p-3 m-3" style="background-color: @template.TemplateColor">
+                    <h5 class="hourglass-template-card-title card-title">@template.Name</h5>
                     <img src="@template.TemplateImage" class="card-img-top" alt="Template Image">
                 </div>
             </div>
@@ -23,22 +27,4 @@
 
 
 
-@code {
-    [Inject]
-    private IUnitofWork _unitofWork{ get; set; }
-    private IEnumerable<Template> TemplateList { get; set; }
-    [Inject]
-    private NavigationManager Navigation { get; set; } // Inject NavigationManager
-    private void OpenTemplateSession(int templateID)
-    {
-        Navigation.NavigateTo($"/TemplateSession/{templateID}");
-    }
 
-
-    protected override void OnInitialized()
-    {
-        // Gather all of the templates associated with the user
-        // Can utilize a predicate function to gather the templates you want
-        TemplateList = _unitofWork.Template.List();
-    }
-}
