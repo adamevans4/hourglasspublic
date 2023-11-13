@@ -79,3 +79,35 @@ a, .btn-link {
 a:hover {
     cursor: pointer !important;
 }
+
+button.watchbutton {
+    color: #ffffff;
+    background-color: #4fceff;
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+    margin: auto;
+}
+
+/*Container for stopwatch content*/
+.watchbox {
+    position: relative;
+    border: 3px solid green;
+}
+
+/*Div for all stopwatch element*/
+.boxcenter {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+button.startbutton {
+    /*Why is the start button not changing??*/
+    background-color: red;
+}
+
+/*-------- Scroll bar ----------*/
