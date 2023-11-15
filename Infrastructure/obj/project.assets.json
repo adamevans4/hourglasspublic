@@ -3017,11 +3017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\School\\Desktop\\MauiConvert\\projectgroup1-1105\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\School\\Desktop\\MauiConvert\\projectgroup1-1105\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\School\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\School\\Desktop\\MauiConvert\\projectgroup1-1105\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-14\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3043,8 +3043,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\School\\Desktop\\MauiConvert\\projectgroup1-1105\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "C:\\Users\\School\\Desktop\\MauiConvert\\projectgroup1-1105\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj"
             }
           }
         }
