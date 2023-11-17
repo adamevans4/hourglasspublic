@@ -8,7 +8,7 @@
 
 <h1>Your Templates:</h1>
 <div class="row text-center">
-    <a class="hourglass-button btn btn-primary m-3 disabled" role="button" href="CreateTemplate">Create New <i class="bi bi-plus-circle"></i></a>
+    <a class="hourglass-button btn btn-primary m-3" role="button" @onclick="() => OpenCreateTemplate()">Create New <i class=" bi bi-plus-circle"></i></a>
 </div>
 
 <div class="row">
@@ -18,7 +18,7 @@
             <div class="card mb-3">
                 <div class="text-center card-body p-3 m-3" style="background-color: @template.TemplateColor">
                     <h5 class="hourglass-template-card-title card-title">@template.Name</h5>
-                    <img src="@template.TemplateImage" class="card-img-top" alt="Template Image">
+                    <i class="fas @template.TemplateImage"></i>
                 </div>
             </div>
         </a>

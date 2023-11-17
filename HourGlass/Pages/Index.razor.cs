@@ -19,6 +19,10 @@ namespace Hourglass.Pages
         {
             Navigation.NavigateTo($"/TemplateSession/{templateID}");
         }
+        private void OpenCreateTemplate()
+        {
+            Navigation.NavigateTo("/UpsertTemplate/");
+        }
 
         protected override void OnInitialized()
         {
