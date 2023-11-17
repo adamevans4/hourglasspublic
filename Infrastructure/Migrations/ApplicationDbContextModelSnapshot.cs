@@ -45,7 +45,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ApplicationUser");
+                    b.ToTable("ApplicationUser", (string)null);
                 });
 
             modelBuilder.Entity("ApplicationCore.Models.Session", b =>
@@ -72,7 +72,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TemplateId");
 
-                    b.ToTable("Session");
+                    b.ToTable("Session", (string)null);
                 });
 
             modelBuilder.Entity("ApplicationCore.Models.Template", b =>
@@ -101,7 +101,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TemplateGroupId");
 
-                    b.ToTable("Template");
+                    b.ToTable("Template", (string)null);
                 });
 
             modelBuilder.Entity("ApplicationCore.Models.TemplateGroup", b =>
@@ -118,7 +118,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TemplateGroup");
+                    b.ToTable("TemplateGroup", (string)null);
                 });
 
             modelBuilder.Entity("ApplicationCore.Models.UserTemplate", b =>
@@ -141,7 +141,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("TemplateId");
 
-                    b.ToTable("UserTemplate");
+                    b.ToTable("UserTemplate", (string)null);
                 });
 
             modelBuilder.Entity("ApplicationCore.Models.Session", b =>
