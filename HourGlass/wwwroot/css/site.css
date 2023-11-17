@@ -1,6 +1,6 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bruno+Ace+SC&family=Rampart+One&display=swap");
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
