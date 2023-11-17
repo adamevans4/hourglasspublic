@@ -25,4 +25,9 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\NewFolder1\" />
+    <Folder Include="wwwroot\css\NewFolder\" />
+  </ItemGroup>
+
 </Project>

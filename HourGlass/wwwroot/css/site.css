@@ -111,3 +111,51 @@ button.startbutton {
 }
 
 /*-------- Scroll bar ----------*/
+
+/*-------- Buttons and fonts ----------*/
+.hg-submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    /* Border styles */
+    border: 2px solid #4CAF50; /* Border color */
+    transition: border-color 0.3s ease; /* Transition effect on border color change */
+}
+
+    .hg-submit-button:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        transition: width 0.3s ease-out, height 0.3s ease-out;
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        border-color: #3498db; /* Change border color on hover */
+    }
+
+    .hg-submit-button:hover:before {
+        width: 0;
+        height: 0;
+    }
+
+h1, h2, h3, p, div, label, button {
+    font-family: 'Bruno Ace SC', sans-serif;
+}
+.form-check-input:checked {
+    background-color: #4CAF50; /* Green color */
+    border-color: #4CAF50; /* Border color */
+}

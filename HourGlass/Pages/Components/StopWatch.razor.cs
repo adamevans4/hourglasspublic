@@ -1,4 +1,4 @@
-namespace Hourglass.Pages
+namespace Hourglass.Pages.Components
 {
     public partial class StopWatch
     {
@@ -21,7 +21,7 @@ namespace Hourglass.Pages
             }
             catch (OperationCanceledException)
             {
-            // Caught the exception thrown by the cancellation token. Do nothing here.
+                // Caught the exception thrown by the cancellation token. Do nothing here.
             }
         }
 
