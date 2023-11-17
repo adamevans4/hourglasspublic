@@ -9,8 +9,8 @@ namespace Hourglass.Pages
     public partial class Index
     {
         [Inject]
-        private IUnitofWork _unitofWork { get; set; }
-        private IEnumerable<Template> TemplateList { get; set; }
+        private IUnitofWork? _unitofWork { get; set; }
+        private IEnumerable<Template>? TemplateList { get; set; }
 
         [Inject]
         private NavigationManager Navigation { get; set; } // Inject NavigationManager
