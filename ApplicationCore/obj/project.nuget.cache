@@ -1,8 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "dgSpecHash": "kW27igSPdVwyXP2f4grYgi77iF7bG0hCNQFcpvptRkEMboC68p5h25/MWYnzdxuDLxD8zO+dydb5GFKQv9rxkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj",
+=======
   "dgSpecHash": "r6gE0RyV3828+H+VjMuWqKufKQ6zptfb0/hPqyF6TDohSnju7riNQz3xNk3P3ph2SXVoI4d3lcZZg+V3jUbiHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj",
+>>>>>>> master
+=======
+  "dgSpecHash": "G8OdYRYiR00u6SADc5U0bbwsCyP+uELqh+uVaFsdEflA6f/rSHmJh0fTwfdwrT+/oYFmFa0EliqXcgUODtlB3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj",
+>>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
   "expectedPackageFiles": [
     "C:\\Users\\kaico\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\kaico\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -68,5 +80,12 @@
     "C:\\Users\\kaico\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\kaico\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
