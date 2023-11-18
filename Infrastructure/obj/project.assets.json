@@ -3017,10 +3017,15 @@
     "version": "1.0.0",
     "restore": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\Infrastructure\\Infrastructure.csproj",
+=======
+      "projectUniqueName": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\Infrastructure.csproj",
+>>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\School\\.nuget\\packages\\",
+<<<<<<< HEAD
       "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-14\\Infrastructure\\obj\\",
 =======
       "projectUniqueName": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj",
@@ -3029,6 +3034,9 @@
       "packagesPath": "C:\\Users\\kaico\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\obj\\",
 >>>>>>> master
+=======
+      "outputPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\obj\\",
+>>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kaico\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3046,12 +3054,17 @@
           "targetAlias": "net7.0",
           "projectReferences": {
 <<<<<<< HEAD
+<<<<<<< HEAD
             "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj": {
               "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj"
 =======
             "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj": {
               "projectPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj"
 >>>>>>> master
+=======
+            "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj"
+>>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
             }
           }
         }
@@ -3104,5 +3117,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
