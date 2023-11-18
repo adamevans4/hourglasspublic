@@ -20,8 +20,9 @@ namespace ApplicationCore.Models
 		[DataType(DataType.Date)]
 		[DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
 		public DateTime SessionEnd { get; set; }
-		public TimeSpan Duration { get; set; }
-		public int TemplateId { get; set; }
+		[Required]
+        public TimeSpan Duration { get; set; }
+        int TemplateId { get; set; }
 		[ForeignKey("TemplateId")]
 		public virtual required Template Template { get; set; }
 		
