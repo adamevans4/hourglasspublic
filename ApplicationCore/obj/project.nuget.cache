@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kW27igSPdVwyXP2f4grYgi77iF7bG0hCNQFcpvptRkEMboC68p5h25/MWYnzdxuDLxD8zO+dydb5GFKQv9rxkA==",
+  "dgSpecHash": "G8OdYRYiR00u6SADc5U0bbwsCyP+uELqh+uVaFsdEflA6f/rSHmJh0fTwfdwrT+/oYFmFa0EliqXcgUODtlB3w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\School\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\School\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -68,5 +68,12 @@
     "C:\\Users\\School\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\School\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
