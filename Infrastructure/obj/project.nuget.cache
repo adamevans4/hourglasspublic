@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ANqKtJ3RSJPXbLJKWwBui32inWQ0AtYcTGHlbOgOln6tqzzO4ym8YLVPqbKTA5nWQKYtpmUiJptBqXS+JrxdRw==",
+  "dgSpecHash": "EAozPyGoa3PNFH3RzgKB48m6doTOOvLhnaHGvDWgfHYlRR28DzDqBr7HsYrtYtOuifKR32wiLa1pMk791NEpsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\School\\source\\repos\\Hourglass 11-19\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\School\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\School\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
