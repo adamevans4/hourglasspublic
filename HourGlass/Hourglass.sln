@@ -12,9 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "..\Infras
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationCore", "..\ApplicationCore\ApplicationCore.csproj", "{F00F06A9-16BF-4B28-9BD9-5664EB1453CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HourglassCommon", "..\HourglassCommon\HourglassCommon.csproj", "{98F0482C-0E0D-4E07-BBE8-46C79CF04CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "..\Common\Common.csproj", "{6977EA91-0CFC-4D20-A521-F49AF0678D91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HourglassNative", "..\HourglassNative\HourglassNative.csproj", "{D4AFE356-3321-4D7C-A5E2-D05E6CBBDFC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HourglassApp", "..\HourglassApp\HourglassApp.csproj", "{19E7CEA1-6BC7-464A-AA8F-AD774B5EA64C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,16 +34,16 @@ Global
 		{F00F06A9-16BF-4B28-9BD9-5664EB1453CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F00F06A9-16BF-4B28-9BD9-5664EB1453CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F00F06A9-16BF-4B28-9BD9-5664EB1453CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98F0482C-0E0D-4E07-BBE8-46C79CF04CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98F0482C-0E0D-4E07-BBE8-46C79CF04CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98F0482C-0E0D-4E07-BBE8-46C79CF04CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98F0482C-0E0D-4E07-BBE8-46C79CF04CEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4AFE356-3321-4D7C-A5E2-D05E6CBBDFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4AFE356-3321-4D7C-A5E2-D05E6CBBDFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4AFE356-3321-4D7C-A5E2-D05E6CBBDFC4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{D4AFE356-3321-4D7C-A5E2-D05E6CBBDFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4AFE356-3321-4D7C-A5E2-D05E6CBBDFC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4AFE356-3321-4D7C-A5E2-D05E6CBBDFC4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6977EA91-0CFC-4D20-A521-F49AF0678D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6977EA91-0CFC-4D20-A521-F49AF0678D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6977EA91-0CFC-4D20-A521-F49AF0678D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6977EA91-0CFC-4D20-A521-F49AF0678D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E7CEA1-6BC7-464A-AA8F-AD774B5EA64C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E7CEA1-6BC7-464A-AA8F-AD774B5EA64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E7CEA1-6BC7-464A-AA8F-AD774B5EA64C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{19E7CEA1-6BC7-464A-AA8F-AD774B5EA64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E7CEA1-6BC7-464A-AA8F-AD774B5EA64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E7CEA1-6BC7-464A-AA8F-AD774B5EA64C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

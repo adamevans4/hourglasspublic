@@ -1,42 +1,24 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "C:\\Users\\School\\source\\repos\\hourglass 11-14\\Infrastructure\\Infrastructure.csproj": {}
-=======
-    "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\Infrastructure.csproj": {}
->>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
+    "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj": {
+    "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj",
+        "projectPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\ApplicationCore\\ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\School\\.nuget\\packages\\",
-<<<<<<< HEAD
-        "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-14\\ApplicationCore\\obj\\",
-=======
-    "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj",
-        "projectName": "ApplicationCore",
-        "projectPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\kaico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\obj\\",
->>>>>>> master
-=======
-        "outputPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\obj\\",
->>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
+        "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\kaico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\School\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -97,40 +80,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "C:\\Users\\School\\source\\repos\\hourglass 11-14\\Infrastructure\\Infrastructure.csproj": {
-=======
-    "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\Infrastructure.csproj": {
->>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
+    "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\School\\.nuget\\packages\\",
-<<<<<<< HEAD
-        "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-14\\Infrastructure\\obj\\",
-=======
-    "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\kaico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\obj\\",
->>>>>>> master
-=======
-        "outputPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\Infrastructure\\obj\\",
->>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
+        "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\kaico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\School\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -138,24 +106,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-              "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-14\\ApplicationCore\\ApplicationCore.csproj"
-=======
-              "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj"
->>>>>>> master
-=======
-              "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\School\\source\\repos\\hourglass 11-16\\ApplicationCore\\ApplicationCore.csproj"
->>>>>>> 8aa2ed08c5d0634e0cb70dc51b9d6cd68312bda8
+              "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\ApplicationCore\\ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-17\\ApplicationCore\\ApplicationCore.csproj"
               }
             }
           }
@@ -205,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
