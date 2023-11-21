@@ -18,10 +18,11 @@ namespace HourglassApp
 				{
 					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				});
-            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            // Configure your connection string
+            var connectionString = "Data Source=sql5106.site4now.net;Initial Catalog=db_aa0af3_hourglassdata;User Id=db_aa0af3_hourglassdata_admin;Password=6PCa3.6p!iRcXNA";
 
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
-				throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+            // Register the connection string with the App instance
+            builder.Services.AddSingleton(connectionString);
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString, providerOptions => providerOptions.EnableRetryOnFailure(maxRetryCount: 5,
