@@ -361,3 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Ignore specific files and directories
+
+# ApplicationCore
+ApplicationCore/bin/
+ApplicationCore/obj/
+
+# Infrastructure
+Infrastructure/bin/
+Infrastructure/obj/
