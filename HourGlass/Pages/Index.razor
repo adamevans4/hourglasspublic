@@ -3,6 +3,7 @@
 @using ApplicationCore.Models
 @using ApplicationCore.Interfaces
 @using Microsoft.AspNetCore.Components 
+@inject IJSRuntime JsRuntime
 
 <PageTitle>Index</PageTitle>
 
@@ -25,7 +26,26 @@
     }
 </div>
 
+<div class="row">
+    <div style="text-align: center;">Weekly Stats</div>
+    <div class="col-3 card card-body m-1" id="bar-chart-container">
+        <!-- Bar chart will be created here -->
+    </div>
+    <div class="col-3 card card-body m-1">
+        <div id="pie-chart-container"></div>
+    </div>
+    <div class="col-3 card card-body m-1" id="weekly-stats">
+
+    </div>
+</div>
+
+<script suppress-error="BL9992" src="js/index.js"</script>
+<script suppress-error="BL9992" src="https://d3js.org/d3.v5.min.js"></script>
+
+
+
 <Common.TestComponent/>
+
 
 
 
