@@ -23,23 +23,32 @@ namespace HourglassApp.Pages
                 SessionTemplate = _unitofWork.Template.GetById(templateID);
             }
         }
+        private bool IsValidTimeRange()
+        {
+            return StartTime < EndTime; // Allows submission only if end time is after start time
+        }
+        private void HandleBackRequest()
+        {
+            //Go back the previous page
+            Navigation.NavigateTo("");
+        }
         private void HandleSubmit()
         {
             if (SessionTemplate != null)
             {
-                
-                    Session UserSession = new ()
-                    {
-                        Template = SessionTemplate,
-                        SessionStart = StartTime,
-                        SessionEnd = EndTime,
-                        Duration = EndTime - StartTime
-                    };
-                    _unitofWork.Session.Add(UserSession);
-                    _unitofWork.Commit();
 
-                    Navigation.NavigateTo("");
-               
+                Session UserSession = new()
+                {
+                    Template = SessionTemplate,
+                    SessionStart = StartTime,
+                    SessionEnd = EndTime,
+                    Duration = EndTime - StartTime
+                };
+                _unitofWork.Session.Add(UserSession);
+                _unitofWork.Commit();
+
+                Navigation.NavigateTo("");
+
             }
 
 

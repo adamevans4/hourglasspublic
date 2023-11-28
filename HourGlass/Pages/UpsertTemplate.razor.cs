@@ -96,5 +96,10 @@ namespace Hourglass.Pages
         {
             SelectedIcon = icon; // Update the SelectedIcon property on selection
         }
+        private void HandleBackRequest()
+        {
+            //Go back the previous page
+            Navigation.NavigateTo("");
+        }
     }
 }

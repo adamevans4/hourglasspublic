@@ -22,7 +22,7 @@ a, .btn-link {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 .content {
@@ -73,11 +73,13 @@ a, .btn-link {
 /*-------- Custom site CSS ----------*/
 
 .hourglass-template-card {
-    text-decoration: none;        
+    text-decoration: none;
 }
-.hourglass-button{
+
+.hourglass-button {
     width: 10em;
 }
+
 a:hover {
     cursor: pointer !important;
 }
@@ -157,10 +159,12 @@ button.startbutton {
 h1, h2, h3, p, div, label, button {
     font-family: 'Bruno Ace SC', sans-serif;
 }
+
 .form-check-input:checked {
     background-color: #4CAF50; /* Green color */
     border-color: #4CAF50; /* Border color */
 }
+
 .hg-card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -187,6 +191,7 @@ h1, h2, h3, p, div, label, button {
     display: inline-block;
     margin-right: 10px; /* Adjust the spacing between icons */
 }
+
 @keyframes glow {
     0% {
         box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
@@ -203,4 +208,30 @@ h1, h2, h3, p, div, label, button {
 
 .selected-icon {
     animation: glow 1s infinite alternate;
+}
+
+.warning-message {
+    background-color: white;
+    padding: 10px; /* Optional: Add padding for better visual appearance */
+    border-radius: 5px;
+    text-align: center; /* Optional: Add rounded corners */
+    /* Add any other necessary styling */
+}
+
+.hg-back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #6b5b95;
+    border-radius: 5px;
+    color: #6b5b95;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.hg-back-btn:hover {
+    background-color: #6b5b95;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

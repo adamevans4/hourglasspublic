@@ -23,6 +23,15 @@ namespace Hourglass.Pages
                 SessionTemplate = _unitofWork.Template.GetById(templateID);
             }
         }
+        private bool IsValidTimeRange()
+        {
+            return StartTime < EndTime; // Allows submission only if end time is after start time
+        }
+        private void HandleBackRequest()
+        {
+            //Go back the previous page
+            Navigation.NavigateTo("");
+        }
         private void HandleSubmit()
         {
             if (SessionTemplate != null)
