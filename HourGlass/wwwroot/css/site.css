@@ -90,28 +90,37 @@ button.watchbutton {
     border: none;
     border-radius: 3px;
     width: 200px;
-    margin: auto;
+    margin: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 36px;
 }
 
 /*Container for stopwatch content*/
 .watchbox {
-    position: relative;
-    border: 3px solid green;
+    position: center;
 }
 
 /*Div for all stopwatch element*/
 .boxcenter {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 button.startbutton {
-    /*Why is the start button not changing??*/
-    background-color: red;
+    margin-left: 100px;
+    background-color: lightgreen;
+    border-radius: 100%;
+    padding: 130px 30px;
+    font-size: 30px;
+}
+
+.timenumber {
+    font-size: 70px;
+    padding-left: 70px;
+    padding-top: 30px;
 }
 
 /*-------- Scroll bar ----------*/
