@@ -23,7 +23,10 @@ namespace Hourglass.Pages
         {
             Navigation.NavigateTo("/UpsertTemplate/");
         }
-
+        protected void EditTemplate(int templateId)
+        {
+            Navigation.NavigateTo($"/UpsertTemplate/{templateId}");
+        }
         protected override void OnInitialized()
         {
             // Gather all of the templates associated with the user

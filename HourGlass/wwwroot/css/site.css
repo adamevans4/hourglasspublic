@@ -244,3 +244,21 @@ h1, h2, h3, p, div, label, button {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.hg-delete-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #C70039; /* Deep red border */
+    border-radius: 5px;
+    color: #C70039; /* Deep red text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.hg-delete-btn:hover {
+    background-color: #C70039; /* Deep red background on hover */
+    color: #fff; /* White text color on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
