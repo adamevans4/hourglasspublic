@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj": {
+    "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\kaico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\obj\\",
+        "projectPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\ApplicationCore\\ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\School\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kaico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\School\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -80,24 +80,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\kaico\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\School\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kaico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\School\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -113,8 +113,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\kaico\\source\\repos\\projectgroup1\\ApplicationCore\\ApplicationCore.csproj"
+              "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\ApplicationCore\\ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\School\\source\\repos\\Hourglass 11-21\\ApplicationCore\\ApplicationCore.csproj"
               }
             }
           }
@@ -164,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

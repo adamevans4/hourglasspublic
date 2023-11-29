@@ -4,10 +4,11 @@
 	<div class="boxcenter">
 		<h1>Timer</h1>
 
+		<p class="timenumber">@stopwatchvalue</p>
 		<button class="startbutton" onclick="@(async() => { if (!isRunning) await StartTimer(); })">Start/Resume</button>
+		<br>
 		<button class="watchbutton" onclick="@Pause">Pause</button>
 		<button class="watchbutton" onclick="@Reset">Reset</button>
 
-		<p>@stopwatchvalue</p>
 	</div>
 </div>

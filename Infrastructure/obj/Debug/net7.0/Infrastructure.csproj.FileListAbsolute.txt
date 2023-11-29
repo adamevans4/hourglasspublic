@@ -117,3 +117,38 @@ C:\Users\kaico\source\repos\projectgroup1\Infrastructure\obj\Debug\net7.0\refint
 C:\Users\kaico\source\repos\projectgroup1\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 C:\Users\kaico\source\repos\projectgroup1\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
 C:\Users\kaico\source\repos\projectgroup1\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\bin\Debug\net7.0\ApplicationCore.dll
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\bin\Debug\net7.0\ApplicationCore.pdb
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
+C:\Users\JunWo\Desktop\CS 3750\Project\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\bin\Debug\net7.0\Infrastructure.dll
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\bin\Debug\net7.0\ApplicationCore.dll
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\bin\Debug\net7.0\ApplicationCore.pdb
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfo.cs
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.sourcelink.json
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.CopyComplete
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.dll
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache
+C:\Users\School\source\repos\Hourglass 11-21\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
