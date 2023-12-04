@@ -1,0 +1,45 @@
+﻿@page "/PastSessions"
+@using ApplicationCore.Models
+@using ApplicationCore.Interfaces
+@using Microsoft.AspNetCore.Components
+
+<h3 style="text-center">Sessions In The Last 7 Days</h3>
+
+@if (SessionList == null)
+{
+    <h1>You dont have any sessions</h1>
+}
+else
+{
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Template</th>
+                <th>Day</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Duration</th>
+                <th>Actions</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var session in SessionList)
+            {
+                <tr style="background-color: @session.Template.TemplateColor">
+                    <td>@session.Template.Name <i class="fas @session.Template.TemplateImage"></i></td>
+                    <td>@session.SessionStart.ToString("MMM. d")</td>
+                    <td>@session.SessionStart.ToString("hh:mm tt")</td>
+                    <td>@session.SessionEnd.ToString("hh:mm tt")</td>
+                    <td>@String.Format("{0:%h} hours {0:%m} minutes", session.Duration)</td>
+                    <td>
+                        <button class="hg-submit-button" type="button" @onclick="() => UpdateSession(session.Template.Id, session.Id)">Edit Session</button>
+                        <button class="hg-delete-solid-btn justify-content-center me-2" role="button" @onclick="() => HandleDeleteRequest(session.Id)">Delete</button>
+                    </td>
+                    <!-- Add more columns' data as needed -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
