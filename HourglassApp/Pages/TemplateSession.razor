@@ -1,4 +1,4 @@
-﻿@page "/TemplateSession/{templateID:int}"
+﻿@page "/TemplateSession/{TemplateID:int}/{sessionId:int?}"
 
 <PageTitle>Start a Session!</PageTitle>
 
@@ -9,7 +9,7 @@
 {
     <form @onsubmit="@(e => HandleSubmit())" class="container mt-5">
         <div class="card hg-card p-3" style="background-color: @SessionTemplate.TemplateColor">
-            <h1>Enter a Session for: @SessionTemplate.Name</h1>
+            <h1>@(SessionID != null ? "Update" : "Enter") a Session for: @SessionTemplate.Name</h1>
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -47,13 +47,12 @@
                     else
                     {
                         <div class="col-md-12 d-flex justify-content-center">
-                            <button class="hg-submit-button justify-content-center" type="submit">Enter</button>
+                            <button class="hg-submit-button justify-content-center" type="submit">@(SessionID != null ? "Update" : "Enter")</button>
                         </div>
                     }
-
-
                 </div>
             </div>
+
         </div>
     </form>
     <div class="mt-4 col-md-12 d-flex justify-content-center">
