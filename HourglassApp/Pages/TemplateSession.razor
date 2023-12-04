@@ -1,5 +1,6 @@
 ﻿@page "/TemplateSession/{TemplateID:int}/{sessionId:int?}"
 
+
 <PageTitle>Start a Session!</PageTitle>
 
 <link href="/css/Session.css" rel="stylesheet" />
@@ -8,9 +9,10 @@
 @if (SessionTemplate != null)
 {
     <form @onsubmit="@(e => HandleSubmit())" class="container mt-5">
-        <div class="card hg-card p-3" style="background-color: @SessionTemplate.TemplateColor">
-            <h1>@(SessionID != null ? "Update" : "Enter") a Session for: @SessionTemplate.Name</h1>
-            <div class="row">
+        <div class="card hg-card p-3" style="background: linear-gradient(to bottom, @SessionTemplate.TemplateColor , @GradientEndColor)">
+
+            <h1 class="@TextColor">@(SessionID != null ? "Update" : "Enter") a Session for: @SessionTemplate.Name</h1>
+            <div class="row @TextColor">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="startTime">Start Time</label>

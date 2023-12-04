@@ -94,6 +94,10 @@ namespace HourglassApp.Pages
                     chosenTemplate.Name = TemplateName;
                     chosenTemplate.TemplateImage = SelectedIcon;
                     chosenTemplate.TemplateColor = SelectedColor;
+                    if (string.IsNullOrEmpty(SelectedColor))
+                    {
+                        SelectedColor = "#000000"; // Set a default black color when the value is empty or null
+                    }
                     chosenTemplate.TemplateGroup = SelectedTemplateGroup;
 
                     _unitofWork.Template.Update(chosenTemplate);
@@ -103,6 +107,10 @@ namespace HourglassApp.Pages
                 {
                     // Handle case when creating a template
                     var SelectedTemplateGroup = _unitofWork.TemplateGroup.Get(g => g.Name == SelectedGroup);
+                    if (string.IsNullOrEmpty(SelectedColor))
+                    {
+                        SelectedColor = "#000000"; // Set a default black color when the value is empty or null
+                    }
                     Template UserTemplate = new()
                     {
                         Name = TemplateName,

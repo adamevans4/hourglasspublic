@@ -27,7 +27,11 @@ else
 
             @foreach (var session in SessionList)
             {
-                <tr style="background-color: @session.Template.TemplateColor">
+                var textColor = IsDarkColor(@session.Template.TemplateColor) ? "text-white" : "text-black";
+                var gradientStartColor = @session.Template.TemplateColor; // Starting color for gradient
+                var gradientEndColor = GetTransitionColor(gradientStartColor, IsDarkColor(gradientStartColor)); // Get ending color for gradient
+
+                <tr class="@textColor" style="background: linear-gradient(to bottom, @gradientStartColor, @gradientEndColor)">
                     <td>@session.Template.Name <i class="fas @session.Template.TemplateImage"></i></td>
                     <td>@session.SessionStart.ToString("MMM. d")</td>
                     <td>@session.SessionStart.ToString("hh:mm tt")</td>
