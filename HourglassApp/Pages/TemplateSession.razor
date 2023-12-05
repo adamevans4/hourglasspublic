@@ -48,9 +48,14 @@
                     }
                     else
                     {
-                        <div class="col-md-12 d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center mt-3">
+                            @if (SessionID != null)
+                            {
+                                <button class="hg-delete-solid-btn justify-content-center me-2" role="button" @onclick="() => HandleDeleteRequest(SessionID.Value)">Delete</button>
+                            }
+                            
+
                             <button class="hg-submit-button justify-content-center" type="submit">@(SessionID != null ? "Update" : "Enter")</button>
-                            <button class="hg-delete-solid-btn justify-content-center me-2" role="button" @onclick="() => HandleDeleteRequest(SessionID.Value)">Delete</button>
                         </div>
                     }
                 </div>

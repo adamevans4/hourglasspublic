@@ -31,14 +31,13 @@ else
                 var gradientStartColor = @session.Template.TemplateColor; // Starting color for gradient
                 var gradientEndColor = GetTransitionColor(gradientStartColor, IsDarkColor(gradientStartColor)); // Get ending color for gradient
 
-                <tr class="@textColor" style="background: linear-gradient(to bottom, @gradientStartColor, @gradientEndColor)">
+                <tr class="@textColor" style="background: linear-gradient(to bottom, @gradientStartColor, @gradientEndColor)" @onclick="() => UpdateSession(session.Template.Id, session.Id)">
                     <td>@session.Template.Name <i class="fas @session.Template.TemplateImage"></i></td>
                     <td>@session.SessionStart.ToString("MMM. d")</td>
                     <td>@session.SessionStart.ToString("hh:mm tt")</td>
                     <td>@session.SessionEnd.ToString("hh:mm tt")</td>
                     <td>@String.Format("{0:%h} hours {0:%m} minutes", session.Duration)</td>
                     <td>
-                        <button class="hg-submit-button" type="button" @onclick="() => UpdateSession(session.Template.Id, session.Id)">Edit Session</button>
                         <button class="hg-delete-solid-btn justify-content-center me-2" role="button" @onclick="() => HandleDeleteRequest(session.Id)">Delete</button>
                     </td>
                     <!-- Add more columns' data as needed -->
