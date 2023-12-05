@@ -20,12 +20,15 @@ namespace Hourglass.Pages
 {
     public partial class UpsertTemplate
     {
+        [Parameter]
+        public int? TemplateId { get; set; }
         [Inject]
         private IUnitofWork? _unitofWork { get; set; }
         protected string TemplateName { get; set; } = string.Empty;
         protected string SelectedIcon { get; set; } = string.Empty;
         protected string SelectedColor { get; set; } = string.Empty;
         protected string SelectedGroup { get; set; } = string.Empty;
+        private bool isDeleteConfirmationVisible = false;
         [Inject]
         private NavigationManager Navigation { get; set; } // Inject NavigationManager
                                                            // List of available icons and groups
@@ -63,30 +66,80 @@ namespace Hourglass.Pages
         protected override void OnInitialized()
         {
             //Populate available groups and icons
-
             AvailableGroups = _unitofWork.TemplateGroup
                 .List()
                 .Select(group => group.Name)
                 .ToList();
+
+            if (TemplateId != null)
+            {
+                // Handle the case when a template ID is present in the URL
+                // Perform actions based on the provided templateId
+
+                //Gather the associated template
+                var templateIdValue = TemplateId.Value;
+                var chosenTemplate = _unitofWork.Template.Get(ct => ct.Id == templateIdValue, false, "TemplateGroup");
+
+                //Gather the associated TemplateGroup
+
+                var associatedGroup = _unitofWork.TemplateGroup.GetById(chosenTemplate.TemplateGroupId);
+
+                //Fill predefined values
+                TemplateName  = chosenTemplate.Name;
+                SelectedIcon  = chosenTemplate.TemplateImage ?? "";
+                SelectedColor = chosenTemplate.TemplateColor;
+                SelectedGroup = associatedGroup.Name;
+            }
+
         }
         private void HandleSubmit()
         {
 
             if (_unitofWork != null)
             {
-
-                var SelectedTemplateGroup = _unitofWork.TemplateGroup.Get(g => g.Name == SelectedGroup);
-                Template UserTemplate = new()
+                if (TemplateId != null)
                 {
-                    Name = TemplateName,
-                    TemplateImage = SelectedIcon,
-                    TemplateColor = SelectedColor,
-                    TemplateGroup = SelectedTemplateGroup
-                };
-                _unitofWork.Template.Add(UserTemplate);
+                    //Handle case when editing the template
+                    var templateIdValue = TemplateId.Value;
+
+                    var SelectedTemplateGroup = _unitofWork.TemplateGroup.Get(g => g.Name == SelectedGroup);
+                    var chosenTemplate = _unitofWork.Template.Get(ct => ct.Id == templateIdValue);
+
+                    chosenTemplate.Name = TemplateName;
+                    chosenTemplate.TemplateImage = SelectedIcon;
+                    chosenTemplate.TemplateColor = SelectedColor;
+                    if (string.IsNullOrEmpty(SelectedColor))
+                    {
+                        SelectedColor = "#000000"; // Set a default black color when the value is empty or null
+                    }
+                    chosenTemplate.TemplateGroup = SelectedTemplateGroup;
+
+                    _unitofWork.Template.Update(chosenTemplate);
+
+                }
+                else
+                {
+                    // Handle case when creating a template
+                    var SelectedTemplateGroup = _unitofWork.TemplateGroup.Get(g => g.Name == SelectedGroup);
+                    if (string.IsNullOrEmpty(SelectedColor))
+                    {
+                        SelectedColor = "#000000"; // Set a default black color when the value is empty or null
+                    }
+                    Template UserTemplate = new()
+                    {
+                        Name = TemplateName,
+                        TemplateImage = SelectedIcon,
+                        TemplateColor = SelectedColor,
+                        TemplateGroup = SelectedTemplateGroup
+                    };
+                    _unitofWork.Template.Add(UserTemplate);
+                    
+                }
+
                 _unitofWork.Commit();
 
                 Navigation.NavigateTo("");
+
 
             }
 
@@ -100,6 +153,29 @@ namespace Hourglass.Pages
         {
             //Go back the previous page
             Navigation.NavigateTo("");
+        }
+        private void HandleDeleteRequest()
+        {
+            isDeleteConfirmationVisible = true;
+        }
+        private void HandleCancelDelete()
+        {
+            // Hide the confirmation dialog
+            isDeleteConfirmationVisible = false;
+        }
+        protected void HandleDeleteConfirmed()
+        {
+            
+            if (_unitofWork != null && TemplateId.HasValue)
+            {
+                var templateIdValue = TemplateId.Value;
+                var chosenTemplate = _unitofWork.Template.Get(ct => ct.Id == templateIdValue);
+                _unitofWork.Template.Delete(chosenTemplate);
+                _unitofWork.Commit();
+                isDeleteConfirmationVisible = false;
+                Navigation.NavigateTo("");
+            }
+                
         }
     }
 }
