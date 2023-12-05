@@ -20,6 +20,7 @@ namespace HourglassApp.Pages
         private NavigationManager Navigation { get; set; } // Inject NavigationManager
         private IEnumerable<Session>? SessionList { get; set; }
 
+
         protected override void OnInitialized()
         {
             // Gather all of the templates associated with the user
@@ -85,6 +86,18 @@ namespace HourglassApp.Pages
         static int Clamp(int value)
         {
             return Math.Clamp(value, 0, 255); // Clamps the value between 0 and 255
+        }
+        /*
+         * Mobile screens typically have a short width and longer length
+         * Desktop screens have a long width and shorter height.
+         * if width / height > 1, then screen is likely desktop.
+         * if width / height < .8, then screen is likely mobile.
+         *
+         */
+        public double mobilesize()
+        {
+            var displayInfo = DeviceDisplay.MainDisplayInfo;
+            return displayInfo.Width / displayInfo.Height;
         }
     }
 }
