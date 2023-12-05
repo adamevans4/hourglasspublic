@@ -132,6 +132,15 @@ namespace HourglassApp.Pages
             int b = Clamp(originalColor.B + delta);
             return $"#{r:X2}{g:X2}{b:X2}";
         }
+        private void HandleDeleteRequest(int SessionID)
+        {
+            var sessionToDelete = _unitofWork.Session.GetById(SessionID);
+            _unitofWork.Session.Delete(sessionToDelete);
+            _unitofWork.Commit();
+            // Navigate to the current page to refresh the content
+            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+
+        }
 
         int Clamp(int value)
         {
