@@ -8,7 +8,7 @@
 
 @if (SessionTemplate != null)
 {
-    <form @onsubmit="@(e => HandleSubmit())" class="container mt-5">
+    <form @onsubmit="@(e => HandleSubmit())" class="container">
         <div class="card hg-card p-3" style="background: linear-gradient(to bottom, @SessionTemplate.TemplateColor , @GradientEndColor)">
 
             <h1 class="@TextColor">@(SessionID != null ? "Update" : "Enter") a Session for: @SessionTemplate.Name</h1>

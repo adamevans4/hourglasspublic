@@ -1,115 +1,228 @@
-﻿// Bar chart data with categories
-var barChartData = [
-    { category: "Fitness", hours: 10 },
-    { category: "School", hours: 20 },
-    { category: "Gym", hours: 30 },
-    { category: "Programming", hours: 40 },
-    { category: "Sleep", hours: 50 }
-];
+var barChartData = [];
 
-var barChartContainerWidth = 300; // Adjust the desired width
-var barChartContainerHeight = 300; // Adjust the desired height
 
-var barChartSvg = d3.select("#bar-chart-container")
-    .append("svg")
-    .attr("width", barChartContainerWidth)
-    .attr("height", barChartContainerHeight)
-    .append("g")
-    .attr("transform", "translate(" + (barChartContainerWidth / 4) + "," + (barChartContainerHeight / 20) + ")");
+function populateGraphs(data) {
+    console.log(data);
 
-// Set up X and Y scales
-var xScale = d3.scaleBand()
-    .domain(barChartData.map(function (d) { return d.category; }))
-    .range([0, 200])
-    .padding(0.1);
+    // grab the data passed in on page load
+    var dataArray = Object.values(data);
 
-var yScale = d3.scaleLinear()
-    .domain([0, d3.max(barChartData, function (d) { return d.hours; })])
-    .range([0, 150]);
+    // create the array with the values for the graphs
+    var barChartData = dataArray.map(function (templateDuration) {
+        return {
+            category: templateDuration.templateName,
+            hours: templateDuration.totalDurationHours,
+            color: templateDuration.templateColor
+        };
+    });
 
-// Create X axis with rotated labels
-barChartSvg.append("g")
-    .attr("transform", "translate(0,150)")
-    .call(d3.axisBottom(xScale))
-    .selectAll("text")
-    .style("text-anchor", "end")
-    .attr("dx", "-.8em")
-    .attr("dy", ".15em")
-    .attr("transform", "rotate(-30)");
 
-// Create Y axis
-barChartSvg.append("g")
-    .call(d3.axisLeft(yScale));
+    // set the container height and wdith
+    var barChartContainerWidth = 400; 
+    var barChartContainerHeight = 350; 
 
-// Add X axis label
-barChartSvg.append("text")
-    .attr("transform", "translate(150,200)")
-    .style("text-anchor", "middle")
-    .text("Activities");
+    // main bar chart svg graph
+    var barChartSvg = d3.select("#bar-chart-container")
+        .append("svg")
+        .attr("width", barChartContainerWidth)
+        .attr("height", barChartContainerHeight)
+        .append("g")
+        .attr("transform", "translate(" + (100) + "," + (50) + ")");
 
-// Add Y axis label
-barChartSvg.append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0 - 40)
-    .attr("x", 0 - 75)
-    .attr("dy", "1em")
-    .style("text-anchor", "middle")
-    .text("Hours");
+    
+    var xScale = d3.scaleBand()
+        .domain(barChartData.map(function (d) { return d.category; }))
+        .range([0, 325])
+        .padding(0.1);
 
-// Create bars for the bar chart
-barChartSvg.selectAll("rect")
-    .data(barChartData)
-    .enter()
-    .append("rect")
-    .attr("x", function (d) { return xScale(d.category); })
-    .attr("y", function (d) { return 150 - yScale(d.hours); })
-    .attr("width", xScale.bandwidth())
-    .attr("height", function (d) { return yScale(d.hours); })
-    .attr("fill", "blue");
+    var yScale = d3.scaleLinear()
+        .domain([d3.max(barChartData, function (d) { return d.hours; }), 0])
+        .range([0, 200]);
 
-// Calculate the total sum of hours
-var totalHours = barChartData.reduce(function (sum, data) {
-    return sum + data.hours;
-}, 0);
+    // X axis with labels
+    barChartSvg.append("g")
+        .attr("transform", "translate(0,200)")
+        .call(d3.axisBottom(xScale))
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-30)")
+        .style("font-size", "18px");
 
-// Convert hours to percentages
-barChartData.forEach(function (data) {
-    data.percentage = (data.hours / totalHours) * 100;
-});
+    // Y axis
+    barChartSvg.append("g")
+        .call(d3.axisLeft(yScale))
 
-// Set up the SVG container for the pie chart
-var pieChartSvg = d3.select("#pie-chart-container")
-    .append("svg")
-    .attr("width", 200)
-    .attr("height", 150)
-    .append("g")
-    .attr("transform", "translate(100,75)");
 
-// Pie chart data using the percentages calculated from the bar chart data
-var pieChartData = barChartData.map(function (data) {
-    return data.percentage;
-});
+    // X axis label
+    /*
+    barChartSvg.append("text")
+        .attr("transform", "translate(150,300)")
+        .style("text-anchor", "middle")
+        .style("font-size", "32px")
+        .text("Activities");
+    */
 
-// Create a pie chart
-var pie = d3.pie();
-var arc = d3.arc().innerRadius(0).outerRadius(75);
+    // Y axis label
+    barChartSvg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -75)
+        .attr("x", -95)
+        .attr("dy", "1.1em")
+        .style("text-anchor", "middle")
+        .style("font-size", "32px")
+        .text("Hours");
 
-pieChartSvg.selectAll("path")
-    .data(pie(pieChartData))
-    .enter()
-    .append("path")
-    .attr("d", arc)
-    .attr("fill", function (d, i) { return d3.schemeCategory10[i]; });
+    // bars for the bar chart
+    barChartSvg.selectAll("rect")
+        .data(barChartData)
+        .enter()
+        .append("rect")
+        .attr("x", function (d) { return xScale(d.category); })
+        .attr("y", function (d) { return yScale(d.hours); }) 
+        .attr("width", xScale.bandwidth())
+        .attr("height", function (d) { return 200 - yScale(d.hours); }) 
+        .attr("fill", function (d) { return d.color; });
 
-// Display percentages and rank in the div
-var weeklyStatsDiv = d3.select("#weekly-stats");
+    // Calculate the total sum of hours
+    var totalHours = barChartData.reduce(function (sum, data) {
+        return sum + data.hours;
+    }, 0);
 
-barChartData.sort(function (a, b) {
-    return b.hours - a.hours;
-});
+    // Convert hours to percentages
+    barChartData.forEach(function (data) {
+        data.percentage = (data.hours / totalHours) * 100;
+    });
 
-barChartData.forEach(function (data, index) {
-    weeklyStatsDiv.append("p")
-        .text((index + 1) + ". " + data.category + ": " + data.percentage.toFixed(2) + "%")
-        .style("font-size", "24px"); // Adjust the font size as needed
-});
+    // Set up the SVG container for the pie chart 
+    var pieChartSvg = d3.select("#pie-chart-container")
+        .append("svg")
+        .attr("width", 400)
+        .attr("height", 300)
+        .style("margin-left", "75px")
+        .append("g")
+        .attr("transform", "translate(220,140)"); 
+
+    // Pie chart data using the percentages 
+    var pieChartData = barChartData.map(function (data) {
+        return {
+            value: data.percentage,
+            color: data.color
+        };
+    });
+
+    var pie = d3.pie().value(function (d) {
+        return d.value;
+    });
+    var arc = d3.arc().innerRadius(0).outerRadius(105); 
+
+    
+    var paths = pieChartSvg.selectAll("path")
+        .data(pie(pieChartData))
+        .enter()
+        .append("g")
+        .attr("class", "arc");
+
+    paths.append("path")
+        .attr("d", arc)
+        .attr("fill", function (d) {
+            return d.data.color;
+        });
+
+    paths.append("text")
+        .attr("transform", function (d) {
+            var centroid = arc.centroid(d);
+            return "translate(" + centroid[0] + "," + centroid[1] + ")";
+        })
+        .attr("dy", "0.75em")
+        .attr("text-anchor", "middle")
+        .style("fill", function (d) {
+            // Check if the segment color is black
+            return d.data.color === "#000001" ? "white" : "black";
+        })
+        .text(function (d) {
+            return d.data.value.toFixed(0) + "%";
+        });
+
+   
+    
+    var legend = d3.select("#pie-chart-container")
+        .append("svg")
+        .attr("width", 450) 
+        .attr("height", 100) 
+        .style("margin-left", "55px")
+        .attr("transform", "translate(50,0)");
+
+    legend.selectAll("rect")
+        .data(barChartData)
+        .enter()
+        .append("rect")
+        .attr("x", function (d, i) {
+            return (i % 2) * 225;
+        })
+        .attr("y", function (d, i) {
+            return Math.floor(i / 2) * 25;
+        })
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("fill", function (d) { return d.color; });
+
+    legend.selectAll("text")
+        .data(barChartData)
+        .enter()
+        .append("text")
+        .attr("x", function (d, i) {
+            return (i % 2) * 225 + 30; 
+        })
+        .attr("y", function (d, i) {
+            return Math.floor(i / 2) * 25 + 14; 
+        })
+        .text(function (d) { return d.category; });
+
+    
+    // Display percentages and rank in the div
+    var weeklyStatsDiv = d3.select("#weekly-stats");
+
+    barChartData.sort(function (a, b) {
+        return b.hours - a.hours;
+    });
+
+    var table = weeklyStatsDiv.append("table").attr("class", "stats-table")
+        .style("margin-left", "75px")
+        .style("margin-top", "50px");
+
+    // Append the header row
+    var thead = table.append("thead");
+    thead.append("tr")
+        .selectAll("th")
+        .data(["Rank", "Category"])
+        .enter()
+        .append("th")
+        .style("font-size", "28px")
+        .style("font-weight", "bold")
+        .style("text-align", "center")
+        .style("border", "1px solid #dddddd")  
+        .text(function (column) { return column; });
+
+    // Append the rows
+    var tbody = table.append("tbody");
+    barChartData.forEach(function (data, index) {
+        var row = tbody.append("tr")
+            .style("border-bottom", "1px solid #dddddd"); 
+        row.append("td")
+            .text(index + 1)
+            .style("text-align", "center")
+            .style("font-size", "24px")
+            .style("border", "1px solid #dddddd"); 
+        row.append("td")
+            .text(data.category)
+            .style("text-align", "center")
+            .style("font-size", "24px")
+            .style("border", "1px solid #dddddd"); 
+    });
+}
+
+
+
+
