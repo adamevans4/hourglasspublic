@@ -18,6 +18,10 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.x
+    - name: Install MAUI Tizen workload
+      run: dotnet workload install maui-tizen
+    - name: Install Android workload
+      run: dotnet workload install android
     - name: Restore dependencies
       run: dotnet restore HourGlass/Hourglass.csproj
     - name: Build
@@ -41,8 +45,6 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.x
-    - name: Install MAUI Tizen workload
-      run: dotnet workload install maui-tizen
     - name: Restore dependencies
       run: dotnet restore HourglassTests/HourglassTests.csproj
     - name: Run tests
