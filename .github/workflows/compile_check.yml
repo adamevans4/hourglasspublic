@@ -49,8 +49,6 @@ jobs:
       run: dotnet workload install maui-tizen
     - name: Install Android workload
       run: dotnet workload install android
-    - name: Install dependencies
-      run: dotnet restore
     - name: Restore dependencies
       run: dotnet restore HourglassTests/HourglassTests.csproj
     - name: Run tests
