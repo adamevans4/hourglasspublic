@@ -71,7 +71,8 @@
             {
                 TemplateId = group.Key,
                 TemplateName = group.First().Template.Name,
-                TotalDurationHours = Math.Round(group.Sum(session => session.Duration.TotalMinutes) / 60, 2)
+                TotalDurationHours = Math.Round(group.Sum(session => session.Duration.TotalMinutes) / 60, 2),
+                TemplateColor = group.First().Template.TemplateColor
             })
             .ToList();
 
