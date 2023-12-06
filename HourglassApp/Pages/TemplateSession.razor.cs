@@ -34,8 +34,12 @@ namespace HourglassApp.Pages
                     StartTime = CurrentSession.SessionStart;
                     EndTime = CurrentSession.SessionEnd;
                 }
-                
-                  
+                else if (SessionID == null)
+                {
+                    StartTime = GetRoundedToMinute(DateTime.Now);
+                    EndTime = StartTime.AddMinutes(15);
+                }
+
             }
             //Template coloring:
 

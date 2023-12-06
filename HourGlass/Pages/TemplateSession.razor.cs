@@ -41,9 +41,16 @@ namespace Hourglass.Pages
                     }
                     else
                     {
-                        // Handle invalid SessionID
+                        // Handle null SessionID
                         SessionID = null;
+                        
                     }
+                    
+                }
+                if (SessionID == null)
+                {
+                    StartTime = GetRoundedToMinute(DateTime.Now);
+                    EndTime = StartTime.AddMinutes(15);
                 }
 
                 //Template coloring:
@@ -65,7 +72,8 @@ namespace Hourglass.Pages
         }
         private bool IsValidTimeRange()
         {
-            return StartTime < EndTime && StartTime != EndTime; // Allows submission only if end time is after start time
+            bool isValid = (StartTime < EndTime) && (StartTime != EndTime);
+            return isValid; // Allows submission only if end time is after start time
         }
         private void HandleBackRequest()
         {
