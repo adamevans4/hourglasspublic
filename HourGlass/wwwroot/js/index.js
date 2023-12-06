@@ -2,7 +2,7 @@
 
 
 function populateGraphs(data) {
- 
+    console.log("test");
 
     // grab the data passed in on page load
     var dataArray = Object.values(data);
@@ -17,7 +17,7 @@ function populateGraphs(data) {
 
 
     // set the container height and wdith
-    var barChartContainerWidth = 500; 
+    var barChartContainerWidth = 400; 
     var barChartContainerHeight = 350; 
 
     // main bar chart svg graph
@@ -97,8 +97,9 @@ function populateGraphs(data) {
     // Set up the SVG container for the pie chart 
     var pieChartSvg = d3.select("#pie-chart-container")
         .append("svg")
-        .attr("width", 400)  
-        .attr("height", 300) 
+        .attr("width", 400)
+        .attr("height", 300)
+        .style("margin-left", "75px")
         .append("g")
         .attr("transform", "translate(220,140)"); 
 
@@ -131,11 +132,13 @@ function populateGraphs(data) {
         .attr("text-anchor", "middle")
         .text(function (d, i) { return barChartData[i].percentage.toFixed(0) + "%"; });
 
+   
     
     var legend = d3.select("#pie-chart-container")
         .append("svg")
-        .attr("width", 500) 
+        .attr("width", 450) 
         .attr("height", 100) 
+        .style("margin-left", "55px")
         .attr("transform", "translate(50,0)");
 
     legend.selectAll("rect")
@@ -164,7 +167,7 @@ function populateGraphs(data) {
         })
         .text(function (d) { return d.category; });
 
-
+    
     // Display percentages and rank in the div
     var weeklyStatsDiv = d3.select("#weekly-stats");
 
@@ -172,7 +175,9 @@ function populateGraphs(data) {
         return b.hours - a.hours;
     });
 
-    var table = weeklyStatsDiv.append("table").attr("class", "stats-table");
+    var table = weeklyStatsDiv.append("table").attr("class", "stats-table")
+        .style("margin-left", "75px")
+        .style("margin-top", "50px");
 
     // Append the header row
     var thead = table.append("thead");
