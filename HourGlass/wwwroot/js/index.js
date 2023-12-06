@@ -1,7 +1,8 @@
-﻿var barChartData = [];
+var barChartData = [];
 
 
 function populateGraphs(data) {
+    console.log(data);
 
     // grab the data passed in on page load
     var dataArray = Object.values(data);
@@ -10,7 +11,8 @@ function populateGraphs(data) {
     var barChartData = dataArray.map(function (templateDuration) {
         return {
             category: templateDuration.templateName,
-            hours: templateDuration.totalDurationHours
+            hours: templateDuration.totalDurationHours,
+            color: templateDuration.templateColor
         };
     });
 
@@ -81,7 +83,7 @@ function populateGraphs(data) {
         .attr("y", function (d) { return yScale(d.hours); }) 
         .attr("width", xScale.bandwidth())
         .attr("height", function (d) { return 200 - yScale(d.hours); }) 
-        .attr("fill", "blue");
+        .attr("fill", function (d) { return d.color; });
 
     // Calculate the total sum of hours
     var totalHours = barChartData.reduce(function (sum, data) {
@@ -104,23 +106,29 @@ function populateGraphs(data) {
 
     // Pie chart data using the percentages 
     var pieChartData = barChartData.map(function (data) {
-        return data.percentage;
+        return {
+            value: data.percentage,
+            color: data.color
+        };
     });
 
-    var pie = d3.pie();
+    var pie = d3.pie().value(function (d) {
+        return d.value;
+    });
     var arc = d3.arc().innerRadius(0).outerRadius(105); 
 
     
     var paths = pieChartSvg.selectAll("path")
         .data(pie(pieChartData))
         .enter()
-        .append("g") 
-        .attr("class", "arc"); 
+        .append("g")
+        .attr("class", "arc");
 
-    
     paths.append("path")
         .attr("d", arc)
-        .attr("fill", function (d, i) { return d3.schemeCategory10[i]; });
+        .attr("fill", function (d) {
+            return d.data.color;
+        });
 
     paths.append("text")
         .attr("transform", function (d) {
@@ -129,7 +137,13 @@ function populateGraphs(data) {
         })
         .attr("dy", "0.75em")
         .attr("text-anchor", "middle")
-        .text(function (d, i) { return barChartData[i].percentage.toFixed(0) + "%"; });
+        .style("fill", function (d) {
+            // Check if the segment color is black
+            return d.data.color === "#000001" ? "white" : "black";
+        })
+        .text(function (d) {
+            return d.data.value.toFixed(0) + "%";
+        });
 
    
     
@@ -152,7 +166,7 @@ function populateGraphs(data) {
         })
         .attr("width", 20)
         .attr("height", 20)
-        .attr("fill", function (d, i) { return d3.schemeCategory10[i]; });
+        .attr("fill", function (d) { return d.color; });
 
     legend.selectAll("text")
         .data(barChartData)
