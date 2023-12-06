@@ -49,8 +49,8 @@
 
 
 
-<div class="row robot-card" id="statsRow" style="margin-top:10px;">
-        <div id="statsTitle" style="text-align: center; margin-top: 10px; font: bold; font-size: 18px;">Weekly Stats</div>
+    <div class="row" id="statsRow" style="margin-top:10px;">
+        <div id="statsTitle" style="text-align: center; margin-top: 10px; font: bold; font-size: 18px;">Weekly Top 5 Stats</div>
         <div class="col-xl-3 m-1" id="bar-chart-container">
         </div>
         <div class="col-xl-4 m-1">
@@ -74,6 +74,9 @@
                 TotalDurationHours = Math.Round(group.Sum(session => session.Duration.TotalMinutes) / 60, 2),
                 TemplateColor = group.First().Template.TemplateColor
             })
+            .OrderByDescending(item => item.TotalDurationHours)
+            .Take(5)
+            .Reverse()
             .ToList();
 
             JsRuntime.InvokeAsync<object>("populateGraphs", templateDurations);
