@@ -2,7 +2,6 @@
 
 
 function populateGraphs(data) {
-    console.log("test");
 
     // grab the data passed in on page load
     var dataArray = Object.values(data);
