@@ -49,42 +49,50 @@
 
 
 
-<div class="row">
-    <div style="text-align: center;">Weekly Stats</div>
-    <div class="col-3 card card-body m-1" id="bar-chart-container">
+<div class="row robot-card" id="statsRow" style="margin-top:10px;">
+        <div id="statsTitle" style="text-align: center; margin-top: 10px; font: bold; font-size: 18px;">Weekly Stats</div>
+        <div class="col-xl-3 m-1" id="bar-chart-container">
+        </div>
+        <div class="col-xl-4 m-1">
+            <div id="pie-chart-container"></div>
+        </div>
+        <div class="col-xl-4 m-1" id="weekly-stats" style="text-align:center;">
+        </div>
     </div>
-    <div class="col-3 card card-body m-1">
-        <div id="pie-chart-container"></div>
-    </div>
-    <div class="col-3 card card-body m-1" id="weekly-stats">
 
-    </div>
-</div>
+    @code {
+        private bool hasRendered = false;
 
-@code {
-    private IEnumerable<Session>? Session { get; set; }
-
-    private void PassDataToJavaScript()
-    {
-    
-        var templateDurations = SessionList
+        private void PassDataToJavaScript()
+        {
+            var templateDurations = SessionList
             .GroupBy(session => session.Template.Id)
             .Select(group => new
             {
                 TemplateId = group.Key,
-                TemplateName = group.First().Template.Name, 
+                TemplateName = group.First().Template.Name,
                 TotalDurationHours = Math.Round(group.Sum(session => session.Duration.TotalMinutes) / 60, 2)
             })
             .ToList();
 
-        JsRuntime.InvokeAsync<object>("populateGraphs", templateDurations);
+            JsRuntime.InvokeAsync<object>("populateGraphs", templateDurations);
+        }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                PassDataToJavaScript();
+                hasRendered = true;
+                StateHasChanged();
+            }
+        }
     }
-}
 
 
 
-<script suppress-error="BL9992" src="js/index.js"</script>
-<script suppress-error="BL9992" src="https://d3js.org/d3.v5.min.js"></script>
+    <script suppress-error="BL9992" src="js/index.js"</script>
+    <script suppress-error="BL9992" src="https://d3js.org/d3.v5.min.js"></script>
 
 
 </div>
