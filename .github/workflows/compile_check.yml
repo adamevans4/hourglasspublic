@@ -9,16 +9,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v3
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '7.0'  
-    - name: List directory contents
-      run: ls -R ${{ github.workspace }}
+        dotnet-version: '7.0' 
 
-    - name: Run unit tests
-      run: dotnet test --filter FullyQualifiedName~UnitTest1.cs --no-build
-      working-directory: ${{ github.workspace }}/HourglassTests/HourglassTests.csproj
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Test
+      run: dotnet test --filter FullyQualifiedName~UnitTest1 --logger "console;verbosity=normal"
