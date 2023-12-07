@@ -19,4 +19,4 @@ jobs:
 
     - name: Run unit tests
       run: dotnet test --filter FullyQualifiedName~UnitTest1.cs --no-build
-      working-directory: path/to/hourglassTests
+      working-directory: ${{ github.workspace }}/HourglassTests
