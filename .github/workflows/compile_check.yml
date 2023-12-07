@@ -35,4 +35,4 @@ jobs:
           exit 1
         fi
     - name: Run Tests
-      run: dotnet test --no-restore --verbosity normal projectgroup1/HourglassTests/HourglassTests.csproj
+      run: dotnet test --no-restore --verbosity normal HourglassTests/HourglassTests.csproj
