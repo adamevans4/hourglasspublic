@@ -15,8 +15,8 @@ namespace Hourglass.Pages
         private IUnitofWork? _unitofWork { get; set; }
         [Inject]
         private NavigationManager NavigationManager { get; set; } // Inject NavigationManager
-        private DateTime StartTime { get; set; } = DateTime.Now;
-        private DateTime EndTime { get; set; } = DateTime.Now;
+        public DateTime StartTime { get; set; } = DateTime.Now;
+        public DateTime EndTime { get; set; } = DateTime.Now;
         private String TextColor { get; set; } = "text-white";
         private String GradientEndColor { get; set; } = "#FFF";
         protected override void OnInitialized()
@@ -70,7 +70,7 @@ namespace Hourglass.Pages
         {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, 0);
         }
-        private bool IsValidTimeRange()
+        public bool IsValidTimeRange()
         {
             bool isValid = (StartTime < EndTime) && (StartTime != EndTime);
             return isValid; // Allows submission only if end time is after start time
