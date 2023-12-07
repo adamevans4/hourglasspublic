@@ -46,21 +46,43 @@
             </div>
         }
     </div>
+    
+</div>
 
 
-
-    <div class="row" id="statsRow" style="margin-top:10px;">
-        <div id="statsTitle" style="text-align: center; margin-top: 10px; font: bold; font-size: 18px;">Weekly Top 5 Stats</div>
-        <div class="col-xl-3 m-1" id="bar-chart-container">
-        </div>
-        <div class="col-xl-4 m-1">
-            <div id="pie-chart-container"></div>
-        </div>
-        <div class="col-xl-4 m-1" id="weekly-stats" style="text-align:center;">
+<div class="col-xl-12 my-4">
+    <h2 class="text-center" id="statsTitle">Weekly Dashboard</h2>
+</div>
+<div class="container d-flex justify-content-center">
+    <div class="dash-card pb-2 my-2">
+        <div class="row justify-content-center align-items-center text-center" id="statsRow">
+            <div class="col-xl-5 m-1">
+                <!-- Content for bar chart -->
+                <div id="bar-chart-container">
+                    <!-- Bar Chart Content -->
+                </div>
+            </div>
+            <div class="col-xl-5 m-1">
+                <!-- Content for pie chart -->
+                <div id="pie-chart-container">
+                    <!-- Pie Chart Content -->
+                </div>
+            </div>
         </div>
     </div>
+</div>
+<div class="container d-flex justify-content-center">
+    <div class="dash-card my-3 pe-5 pb-3"> <!-- Adjusted padding classes -->
+        <div id="weekly-stats">
+            <!-- Content for weekly stats -->
+        </div>
+    </div>
+</div>
 
-    @code {
+
+
+
+ @code {
         private bool hasRendered = false;
 
         private void PassDataToJavaScript()
@@ -75,7 +97,6 @@
                 TemplateColor = group.First().Template.TemplateColor
             })
             .OrderByDescending(item => item.TotalDurationHours)
-            .Take(5)
             .Reverse()
             .ToList();
 
@@ -99,7 +120,6 @@
     <script suppress-error="BL9992" src="https://d3js.org/d3.v5.min.js"></script>
 
 
-</div>
 
 
 
