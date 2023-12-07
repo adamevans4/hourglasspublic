@@ -34,22 +34,5 @@ jobs:
           echo "Build failed"
           exit 1
         fi
-  test:
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 7.x
-    - name: Install MAUI Tizen workload
-      run: dotnet workload install maui-tizen
-    - name: Install Android workload
-      run: dotnet workload install android
-    - name: Restore dependencies
-      run: dotnet restore HourglassTests/HourglassTests.csproj
-    - name: Run tests
-      run: dotnet test --no-restore --verbosity normal HourglassTests/UnitTest1.cs
+    - name: Run Tests
+      run: dotnet test --no-restore --verbosity normal projectgroup1/HourglassTests/HourglassTests.csproj
