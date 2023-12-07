@@ -1,42 +1,29 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET
+name: Run Unit Tests
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET 7.x
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 7.x
-    - name: Install MAUI Tizen workload
-      run: dotnet workload install maui-tizen
-    - name: Install Android workload
-      run: dotnet workload install android
+        dotnet-version: '7.0'  
+
     - name: Restore dependencies
-      run: dotnet restore HourGlass/Hourglass.csproj
-    - name: Build
-      run: dotnet build --no-restore HourGlass/Hourglass.csproj
-    - name: Check for build errors
-      run: |
-        if [ $? -eq 0 ]; then
-          echo "Build successful"
-        else
-          echo "Build failed"
-          exit 1
-        fi
-    - name: Restore NuGet packages
-      run: dotnet restore HourGlass/Hourglass.csproj
+      run: dotnet restore
 
-    - name: Run Tests
-      run: dotnet test --no-build --no-restore --verbosity normal HourglassTests/UnitTest1.cs
-
+    - name: Run unit tests
+      run: dotnet test --filter FullyQualifiedName~UnitTest1.cs --no-build
+      working-directory: path/to/hourglassTests
