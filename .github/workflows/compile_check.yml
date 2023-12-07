@@ -34,5 +34,9 @@ jobs:
           echo "Build failed"
           exit 1
         fi
+    - name: Restore NuGet packages
+      run: dotnet restore HourGlass/Hourglass.csproj
+
     - name: Run Tests
-      run: dotnet test --no-restore --verbosity normal HourglassTests/HourglassTests.csproj
+      run: dotnet test --no-restore --verbosity normal HourGlass/HourglassTests/HourglassTests.csproj
+
