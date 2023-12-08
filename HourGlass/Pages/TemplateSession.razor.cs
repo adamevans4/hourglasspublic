@@ -36,7 +36,7 @@ namespace Hourglass.Pages
                     {
                         SessionID = parsedSessionId;
                         var CurrentSession = _unitofWork.Session.GetById(SessionID.Value);
-                        StartTime = CurrentSession.SessionStart;
+                        StartTime = CurrentSession.SessionStart; 
                         EndTime = CurrentSession.SessionEnd;
                     }
                     else

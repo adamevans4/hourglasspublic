@@ -39,7 +39,7 @@ else
                         <td>@session.SessionEnd.ToString("hh:mm tt")</td>
                         <td>@String.Format("{0:%h} hours {0:%m} minutes", session.Duration)</td>
                         <td>
-                            <button class="hg-delete-solid-btn justify-content-center me-2" role="button" @onclick="() => HandleDeleteRequest(session.Id)">Delete</button>
+                            <button class="hg-delete-solid-btn justify-content-center me-2" role="button" @onclick="() => HandleDeleteRequest(session.Id)" @onclick:stopPropagation="true">Delete</button>
                         </td>
                         <!-- Add more columns' data as needed -->
                     </tr>
