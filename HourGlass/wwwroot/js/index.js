@@ -196,7 +196,7 @@ function populateGraphs(data) {
     var thead = table.append("thead");
     thead.append("tr")
         .selectAll("th")
-        .data(["Rank", "Category"])
+        .data(["Rank", "Category", "Hours"])
         .enter()
         .append("th")
         .style("font-size", "28px")
@@ -220,9 +220,10 @@ function populateGraphs(data) {
             .style("text-align", "center")
             .style("font-size", "24px")
             .style("border", "1px solid #dddddd"); 
+        row.append("td")
+            .text(data.hours)
+            .style("text-align", "center")
+            .style("font-size", "24px")
+            .style("border", "1px solid #dddddd");
     });
 }
-
-
-
-
