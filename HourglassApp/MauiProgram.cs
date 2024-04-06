@@ -19,7 +19,7 @@ namespace HourglassApp
 					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				});
             // Configure your connection string
-            var connectionString = "Data Source=sql5106.site4now.net;Initial Catalog=db_aa0af3_hourglassdata;User Id=db_aa0af3_hourglassdata_admin;Password=6PCa3.6p!iRcXNA";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=hourglasslocal;Trusted_Connection=True;MultipleActiveResultSets=true";
 
             // Register the connection string with the App instance
             builder.Services.AddSingleton(connectionString);
